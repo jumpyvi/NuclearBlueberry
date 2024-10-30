@@ -73,7 +73,7 @@ PACKAGES_TO_INSTALL=(
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 rpm-ostree override remove \
-    containerd firefox-langpacks firefox
+    firefox-langpacks firefox
 
 #### System unit file
 systemctl enable podman.socket
