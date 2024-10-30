@@ -72,13 +72,10 @@ PACKAGES_TO_INSTALL=(
 # this installs a package from fedora repos
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
+rpm-ostree override remove \
+    containerd moby-engine runc firefox-langpacks firefox podman-docker ublue-os-update-services
 
-rpm-ostree remove firefox-langpacks firefox podman-docker ublue-os-update-services
-# this would install a package from rpmfusion
-# rpm-ostree install vlc
-
-#### Example for enabling a System Unit File
-
+#### System unit file
 systemctl enable podman.socket
 systemctl enable docker.socket
 systemctl enable libvirtd
