@@ -21,10 +21,21 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 EOF
 
+
+tee /etc/yum.repos.d/nordvpn.repo <<'EOF'
+[repo.nordvpn.com_yum_nordvpn_centos_x86_64]
+name=NordVPN repo
+baseurl=https://repo.nordvpn.com//yum/nordvpn/centos/x86_64
+enabled=1
+EOF
+
+
+
 RELEASE="$(rpm -E %fedora)"
 
 
 PACKAGES_TO_INSTALL=(
+    nordvpn
     bootc
     containerd.io
     docker-buildx-plugin
