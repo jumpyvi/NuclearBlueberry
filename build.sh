@@ -73,7 +73,7 @@ PACKAGES_TO_INSTALL=(
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 rpm-ostree override remove \
-    containerd moby-engine runc firefox-langpacks firefox podman-docker ublue-os-update-services
+    containerd runc firefox-langpacks firefox podman-docker
 
 #### System unit file
 systemctl enable podman.socket
