@@ -79,3 +79,7 @@ rpm-ostree override remove \
 systemctl enable podman.socket
 systemctl enable docker.socket
 systemctl enable libvirtd
+
+
+### Add brew
+curl -fsSL "https://raw.githubusercontent.com/blue-build/modules/refs/heads/main/modules/brew/brew.sh" | bash
