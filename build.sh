@@ -70,7 +70,7 @@ PACKAGES_TO_INSTALL=(
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm-ostree install "${SERVER_PACKAGES[@]}"
+rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 
 rpm-ostree remove firefox-langpacks firefox podman-docker ublue-os-update-services
