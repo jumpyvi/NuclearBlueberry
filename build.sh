@@ -44,6 +44,7 @@ PACKAGES_TO_INSTALL=(
     qemu-device-usb-redirect
     qemu-img
     qemu-system-x86-core
+    adw-gtk3-theme
     qemu-user-binfmt
     qemu-user-static
     virt-manager
@@ -60,6 +61,8 @@ PACKAGES_TO_INSTALL=(
     samba
     zsh
     code
+    ptyxis
+    nautilus-open-any-terminal
 )
 
 
