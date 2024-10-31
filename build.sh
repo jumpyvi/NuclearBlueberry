@@ -21,6 +21,18 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 EOF
 
+tee /etc/yum.repos.d/ublue-staging.repo <<'EOF'
+[copr:copr.fedorainfracloud.org:ublue-os:staging]
+name=Copr repo for staging owned by ublue-os
+baseurl=https://download.copr.fedorainfracloud.org/results/ublue-os/staging/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/ublue-os/staging/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+
 
 RELEASE="$(rpm -E %fedora)"
 
