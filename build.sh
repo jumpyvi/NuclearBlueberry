@@ -54,7 +54,7 @@ EOF
 
 RELEASE="$(rpm -E %fedora)"
 
-rpm-ostree install https://repo.nordvpn.com/yum/nordvpn/centos/noarch/Packages/n/nordvpn-release-1.0.0-1.noarch.rpm
+#rpm-ostree install https://repo.nordvpn.com/yum/nordvpn/centos/noarch/Packages/n/nordvpn-release-1.0.0-1.noarch.rpm
 
 PACKAGES_TO_INSTALL=(
     nordvpn
