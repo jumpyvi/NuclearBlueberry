@@ -118,4 +118,4 @@ systemctl enable libvirtd
 
 
 ### Add brew
-curl -fsSL "https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/brew.sh" | bash
+curl -fsSL "https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/base/10-brew.sh" | bash
