@@ -34,21 +34,21 @@ enabled=1
 enabled_metadata=1
 EOF
 
-tee /etc/yum.repos.d/nordvpn.repo <<'EOF'
-[nordvpn]
-name = NordVPN YUM repository - $basearch
-baseurl = https://repo.nordvpn.com/yum/nordvpn/centos/$basearch
-enabled = 1
-gpgcheck = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NordVPN
-
-[nordvpn-noarch]
-name = NordVPN YUM repository - noarch
-baseurl = https://repo.nordvpn.com/yum/nordvpn/centos/noarch
-enabled = 1
-gpgcheck = 0
-gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NordVPN
-EOF
+#tee /etc/yum.repos.d/nordvpn.repo <<'EOF'
+#[nordvpn]
+#name = NordVPN YUM repository - $basearch
+#baseurl = https://repo.nordvpn.com/yum/nordvpn/centos/$basearch
+#enabled = 1
+#gpgcheck = 0
+#gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NordVPN
+#
+#[nordvpn-noarch]
+#name = NordVPN YUM repository - noarch
+#baseurl = https://repo.nordvpn.com/yum/nordvpn/centos/noarch
+#enabled = 1
+#gpgcheck = 0
+#gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NordVPN
+#EOF
 
 
 
@@ -57,7 +57,7 @@ RELEASE="$(rpm -E %fedora)"
 #rpm-ostree install https://repo.nordvpn.com/yum/nordvpn/centos/noarch/Packages/n/nordvpn-release-1.0.0-1.noarch.rpm
 
 PACKAGES_TO_INSTALL=(
-    nordvpn
+ #   nordvpn
     bootc
     containerd.io
     docker-buildx-plugin
