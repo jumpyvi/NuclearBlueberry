@@ -93,6 +93,8 @@ PACKAGES_TO_INSTALL=(
     code
     ptyxis
     nautilus-open-any-terminal
+    gcc
+    gtk2-devel
 )
 
 
