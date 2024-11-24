@@ -42,6 +42,7 @@ enabled = 1
 repo_gpgcheck=0
 gpgcheck=0
 skip_if_unavailable=True
+EOF
 
 
 RELEASE="$(rpm -E %fedora)"
