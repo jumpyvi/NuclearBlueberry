@@ -65,6 +65,7 @@ PACKAGES_TO_INSTALL=(
     docker-ce-cli
     docker-compose-plugin
     virt-install
+    libvirt
     libvirt-daemon
     libvirt-daemon-config-network
     libvirt-daemon-driver-interface
@@ -80,6 +81,7 @@ PACKAGES_TO_INSTALL=(
     qemu-device-display-virtio-vga
     qemu-device-usb-redirect
     qemu-img
+    edk2-ovmf
     qemu-system-x86-core
     adw-gtk3-theme
     qemu-user-binfmt
