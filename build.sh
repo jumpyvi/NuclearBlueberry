@@ -65,7 +65,14 @@ PACKAGES_TO_INSTALL=(
     docker-ce-cli
     docker-compose-plugin
     virt-install
+    libvirt-daemon
     libvirt-daemon-config-network
+    libvirt-daemon-driver-interface
+    libvirt-daemon-driver-network
+    libvirt-daemon-driver-nwfilter
+    libvirt-daemon-driver-qemu
+    libvirt-daemon-driver-secret
+    libvirt-daemon-driver-storage-core
     libvirt-daemon-kvm
     qemu-kvm
     qemu-char-spice
