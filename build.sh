@@ -89,7 +89,6 @@ PACKAGES_TO_INSTALL=(
     ifuse
     input-remapper
     samba
-    zsh
     code
     ptyxis
     nautilus-open-any-terminal
@@ -111,7 +110,7 @@ PACKAGES_TO_INSTALL=(
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 rpm-ostree override remove \
-    firefox-langpacks firefox
+    firefox-langpacks firefox gnome-terminal nvtop
 
 #### System unit file
 systemctl enable podman.socket
