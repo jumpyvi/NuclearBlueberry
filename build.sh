@@ -36,12 +36,9 @@ EOF
 
 tee /etc/yum.repos.d/nordvpn.repo <<'EOF'
 [nordvpn]
-name = NordVPN YUM repository
-baseurl = https://repo.nordvpn.com/yum/nordvpn/centos/x86_64
-enabled = 1
-repo_gpgcheck=0
-gpgcheck=0
-skip_if_unavailable=True
+name=nordvpn
+enabled=1
+baseurl=https://repo.nordvpn.com/yum/nordvpn/centos/x86_64
 EOF
 
 
