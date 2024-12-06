@@ -94,6 +94,7 @@ PACKAGES_TO_INSTALL=(
     nautilus-open-any-terminal
     gcc
     gtk2-devel
+    zsh
 )
 
 
