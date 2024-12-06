@@ -38,6 +38,7 @@ tee /etc/yum.repos.d/nordvpn.repo <<'EOF'
 [nordvpn]
 name=nordvpn
 enabled=1
+gpgcheck=0
 baseurl=https://repo.nordvpn.com/yum/nordvpn/centos/x86_64
 EOF
 
