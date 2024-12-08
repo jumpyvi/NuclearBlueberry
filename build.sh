@@ -111,7 +111,7 @@ PACKAGES_TO_INSTALL=(
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 rpm-ostree override remove \
-    firefox-langpacks firefox gnome-terminal-nautilus gnome-terminal nvtop
+    firefox-langpacks firefox nvtop
 
 #### System unit file
 systemctl enable podman.socket
