@@ -94,7 +94,7 @@ PACKAGES_TO_INSTALL=(
     nautilus-open-any-terminal
     gcc
     gtk2-devel
-    xorg-x11-server-utils
+    xorg-x11-server-Xwayland
 )
 
 
