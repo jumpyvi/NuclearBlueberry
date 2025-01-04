@@ -96,8 +96,7 @@ PACKAGES_TO_INSTALL=(
     gtk2-devel
     android-tools 
     xhost
-    kvantum
-    qt5ct
+    yaru-theme 
 )
 
 
