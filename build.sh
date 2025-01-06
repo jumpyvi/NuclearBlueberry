@@ -42,12 +42,24 @@ gpgcheck=0
 baseurl=https://repo.nordvpn.com/yum/nordvpn/centos/x86_64
 EOF
 
+tee /etc/yum.repos.d/ghostty.repo <<'EOF'
+[copr:copr.fedorainfracloud.org:pgdev:ghostty]
+name=Copr repo for Ghostty owned by pgdev
+baseurl=https://download.copr.fedorainfracloud.org/results/pgdev/ghostty/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/pgdev/ghostty/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+EOF
+
 
 RELEASE="$(rpm -E %fedora)"
 
-#rpm-ostree install https://repo.nordvpn.com/yum/nordvpn/centos/noarch/Packages/n/nordvpn-release-1.0.0-1.noarch.rpm
-
 PACKAGES_TO_INSTALL=(
+    ghostty
     nordvpn
     bootc
     containerd.io
