@@ -42,7 +42,7 @@ gpgcheck=0
 baseurl=https://repo.nordvpn.com/yum/nordvpn/centos/x86_64
 EOF
 
-tee /etc/yum.repos.d/wez.repo <<'EOF'
+tee /etc/yum.repos.d/ghostty.repo <<'EOF'
 [copr:copr.fedorainfracloud.org:pgdev:ghostty]
 name=Copr repo for Ghostty owned by pgdev
 baseurl=https://download.copr.fedorainfracloud.org/results/pgdev/ghostty/fedora-$releasever-$basearch/
