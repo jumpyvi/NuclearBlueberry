@@ -102,7 +102,6 @@ PACKAGES_TO_INSTALL=(
     input-remapper
     samba
     code
-    ptyxis
     nautilus-open-any-terminal
     gcc
     gtk2-devel
