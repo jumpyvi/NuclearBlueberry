@@ -78,6 +78,7 @@ PACKAGES_TO_INSTALL=(
     libvirt-daemon-driver-secret
     libvirt-daemon-driver-storage-core
     libvirt-daemon-kvm
+    bridge-utils
     qemu-kvm
     qemu-char-spice
     qemu-device-display-virtio-gpu
