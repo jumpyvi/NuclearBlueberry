@@ -108,18 +108,7 @@ PACKAGES_TO_INSTALL=(
     gtk2-devel
     android-tools 
     xhost
-    yaru-theme
-    cinnamon
-    cinnamon-control-center
-    cinnamon-screensaver
-    nemo-fileroller
-    nemo-image-converter
-    nemo-preview
-    nemo-pytho
-    nm-connection-editor
-    slick-greeter
-    slick-greeter-cinnamon
-    system-config-printer
+    yaru-theme 
 )
 
 
