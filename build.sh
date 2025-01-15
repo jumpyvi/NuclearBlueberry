@@ -115,7 +115,7 @@ PACKAGES_TO_INSTALL=(
     nemo-fileroller
     nemo-image-converter
     nemo-preview
-    nemo-pytho
+    nemo-python
     nm-connection-editor
     slick-greeter
     slick-greeter-cinnamon
