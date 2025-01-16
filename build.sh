@@ -87,7 +87,6 @@ PACKAGES_TO_INSTALL=(
     qemu-img
     edk2-ovmf
     qemu-system-x86-core
-    adw-gtk3-theme
     qemu-user-binfmt
     qemu-user-static
     virt-manager
@@ -108,7 +107,6 @@ PACKAGES_TO_INSTALL=(
     gtk2-devel
     android-tools 
     xhost
-    yaru-theme 
 )
 
 
@@ -135,6 +133,3 @@ systemctl enable libvirtd
 
 ### Add brew
 # curl -fsSL "https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/base/10-brew.sh" | bash
-
-### Adds NixPkgs
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install linux --extra-conf "sandbox = false" --no-start-daemon --no-confirm
