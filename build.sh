@@ -123,7 +123,7 @@ PACKAGES_TO_INSTALL=(
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 rpm-ostree override remove \
-    nvtop
+    nvtop ptyxis
 
 #### System unit file
 systemctl enable podman.socket
