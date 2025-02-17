@@ -102,6 +102,7 @@ PACKAGES_TO_INSTALL=(
     input-remapper
     samba
     code
+    nautilus-open-any-terminal
     gcc
     gtk2-devel
     android-tools 
