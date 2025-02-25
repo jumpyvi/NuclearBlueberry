@@ -73,7 +73,6 @@ RELEASE="$(rpm -E %fedora)"
 
 PACKAGES_TO_INSTALL=(
     wezterm
-    ghostty
     nordvpn
     bootc
     containerd.io
@@ -116,7 +115,6 @@ PACKAGES_TO_INSTALL=(
     input-remapper
     samba
     code
-    nautilus-open-any-terminal
     gcc
     gtk2-devel
     android-tools 
