@@ -12,6 +12,19 @@ gpgcheck=1
 gpgkey=https://download.docker.com/linux/fedora/gpg
 EOF
 
+tee /etc/yum.repos.d/wez.repo <<'EOF'
+[copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly]
+name=Copr repo for wezterm-nightly owned by wezfurlong
+baseurl=https://download.copr.fedorainfracloud.org/results/wezfurlong/wezterm-nightly/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/wezfurlong/wezterm-nightly/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+EOF
+
 tee /etc/yum.repos.d/vscode.repo <<'EOF'
 [code]
 name=Visual Studio Code
@@ -59,6 +72,7 @@ EOF
 RELEASE="$(rpm -E %fedora)"
 
 PACKAGES_TO_INSTALL=(
+    wezterm-nightly
     ghostty
     nordvpn
     bootc
