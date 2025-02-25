@@ -72,7 +72,7 @@ EOF
 RELEASE="$(rpm -E %fedora)"
 
 PACKAGES_TO_INSTALL=(
-    wezterm-nightly
+    wezterm
     ghostty
     nordvpn
     bootc
