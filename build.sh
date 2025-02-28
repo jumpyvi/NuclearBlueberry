@@ -34,18 +34,18 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 EOF
 
-tee /etc/yum.repos.d/ublue-staging.repo <<'EOF'
-[copr:copr.fedorainfracloud.org:ublue-os:staging]
-name=Copr repo for staging owned by ublue-os
-baseurl=https://download.copr.fedorainfracloud.org/results/ublue-os/staging/fedora-$releasever-$basearch/
-type=rpm-md
-skip_if_unavailable=True
-gpgcheck=1
-gpgkey=https://download.copr.fedorainfracloud.org/results/ublue-os/staging/pubkey.gpg
-repo_gpgcheck=0
-enabled=1
-enabled_metadata=1
-EOF
+# tee /etc/yum.repos.d/ublue-staging.repo <<'EOF'
+# [copr:copr.fedorainfracloud.org:ublue-os:staging]
+# name=Copr repo for staging owned by ublue-os
+# baseurl=https://download.copr.fedorainfracloud.org/results/ublue-os/staging/fedora-$releasever-$basearch/
+# type=rpm-md
+# skip_if_unavailable=True
+# gpgcheck=1
+# gpgkey=https://download.copr.fedorainfracloud.org/results/ublue-os/staging/pubkey.gpg
+# repo_gpgcheck=0
+# enabled=1
+# enabled_metadata=1
+# EOF
 
 tee /etc/yum.repos.d/nordvpn.repo <<'EOF'
 [nordvpn]
@@ -53,19 +53,6 @@ name=nordvpn
 enabled=1
 gpgcheck=0
 baseurl=https://repo.nordvpn.com/yum/nordvpn/centos/x86_64
-EOF
-
-tee /etc/yum.repos.d/ghostty.repo <<'EOF'
-[copr:copr.fedorainfracloud.org:pgdev:ghostty]
-name=Copr repo for Ghostty owned by pgdev
-baseurl=https://download.copr.fedorainfracloud.org/results/pgdev/ghostty/fedora-$releasever-$basearch/
-type=rpm-md
-skip_if_unavailable=True
-gpgcheck=1
-gpgkey=https://download.copr.fedorainfracloud.org/results/pgdev/ghostty/pubkey.gpg
-repo_gpgcheck=0
-enabled=1
-enabled_metadata=1
 EOF
 
 
