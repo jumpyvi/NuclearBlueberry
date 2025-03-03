@@ -2,14 +2,14 @@
 
 set -ouex pipefail
 
-tee /etc/yum.repos.d/wez.repo <<'EOF'
-[copr:copr.fedorainfracloud.org:wezfurlong:wezterm-nightly]
-name=Copr repo for wezterm-nightly owned by wezfurlong
-baseurl=https://download.copr.fedorainfracloud.org/results/wezfurlong/wezterm-nightly/fedora-$releasever-$basearch/
+tee /etc/yum.repos.d/ghostty.repo <<'EOF'
+[copr:copr.fedorainfracloud.org:pgdev:ghostty]
+name=Copr repo for Ghostty owned by pgdev
+baseurl=https://download.copr.fedorainfracloud.org/results/pgdev/ghostty/fedora-$releasever-$basearch/
 type=rpm-md
 skip_if_unavailable=True
 gpgcheck=1
-gpgkey=https://download.copr.fedorainfracloud.org/results/wezfurlong/wezterm-nightly/pubkey.gpg
+gpgkey=https://download.copr.fedorainfracloud.org/results/pgdev/ghostty/pubkey.gpg
 repo_gpgcheck=0
 enabled=1
 enabled_metadata=1
@@ -27,7 +27,7 @@ EOF
 RELEASE="$(rpm -E %fedora)"
 
 PACKAGES_TO_INSTALL=(
-    wezterm
+    ghostty
     nordvpn
     bridge-utils
     gtk2-devel
@@ -46,7 +46,7 @@ PACKAGES_TO_INSTALL=(
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 rpm-ostree override remove \
-    nvtop ptyxis tailscale fish tailscale solaar zsh simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
+    nvtop ptyxis fish tailscale solaar zsh simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
 
 ### Add brew
 # curl -fsSL "https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/base/10-brew.sh" | bash
