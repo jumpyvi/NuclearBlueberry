@@ -2,7 +2,6 @@
 
 set -ouex pipefail
 
-
 tee /etc/yum.repos.d/docker-ce.repo <<'EOF'
 [docker-ce-stable]
 name=Docker CE Stable - $basearch
@@ -129,6 +128,7 @@ systemctl enable podman.socket
 systemctl enable docker.socket
 systemctl enable libvirtd
 
+rm -rf /usr/share/themes
 
 ### Add brew
 curl -fsSL "https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/base/10-brew.sh" | bash
