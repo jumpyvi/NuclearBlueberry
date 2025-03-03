@@ -53,7 +53,7 @@ COPY ublue-logo.png /tmp/ublue-logo.png
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
-    mv /tmp/ublue-logo.png /usr/share/pixmaps/fedora-gdm-logo.png && \
+    cp /tmp/ublue-logo.png /usr/share/pixmaps/fedora-gdm-logo.png && cp /tmp/ublue-logo.png /usr/share/plymouth/themes/spinner/silverblue-watermark.png && \
     ostree container commit
 
 ## NOTES:
