@@ -46,7 +46,7 @@ PACKAGES_TO_INSTALL=(
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 rpm-ostree override remove \
-    nvtop ptyxis fish tailscale solaar zsh simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
+    nvtop ptyxis fish tailscale solaar zsh ublue-motd simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
 
 ### Add brew
 # curl -fsSL "https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/base/10-brew.sh" | bash
