@@ -49,10 +49,13 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
+COPY ublue-logo.png /tmp/ublue-logo.png
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
+    mv /tmp/ublue-logo.png /usr/share/pixmaps/fedora-gdm-logo.png && \
     ostree container commit
+
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
