@@ -49,4 +49,4 @@ rpm-ostree override remove \
     nvtop ptyxis tailscace fish tailscale solaar zsh simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
 
 ### Add brew
-curl -fsSL "https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/base/10-brew.sh" | bash
+# curl -fsSL "https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/base/10-brew.sh" | bash
