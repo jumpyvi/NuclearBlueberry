@@ -46,7 +46,7 @@ PACKAGES_TO_INSTALL=(
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 rpm-ostree override remove \
-    nvtop ptyxis tailscale solaar zsh
+    nvtop ptyxis zsh
 
 
 
