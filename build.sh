@@ -32,7 +32,7 @@ PACKAGES_TO_INSTALL=(
 rpm-ostree install "${PACKAGES_TO_INSTALL[@]}"
 
 rpm-ostree override remove \
-    nvtop ptyxis tailscale solaar input-leap simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
+    nvtop ptyxis tailscale solaar simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
 
 
 
