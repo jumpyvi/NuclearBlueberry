@@ -33,6 +33,7 @@ if [ ! -d /root ]; then
     chown root:root /root
 fi
 
-# Install Nix without starting the daemon or initializing
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
-  sh -s -- install linux --no-confirm --init none
+sh <(curl -L https://nixos.org/nix/install) --daemon --yes
+mkdir /etc/.nix-mount-temp
+mv /nix /etc/.nix-mount-temp
+mkdir /nix
