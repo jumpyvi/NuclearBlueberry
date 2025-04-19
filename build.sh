@@ -26,3 +26,9 @@ dnf install -y "${PACKAGES_TO_INSTALL[@]}"
 
 dnf remove -y \
     nvtop ptyxis tailscale solaar simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
+
+
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install linux \
+  --extra-conf "sandbox = false" \
+  --no-start-daemon \
+  --no-confirm
