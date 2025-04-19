@@ -10,7 +10,6 @@ gpgcheck=0
 baseurl=https://repo.nordvpn.com/yum/nordvpn/centos/x86_64
 EOF
 
-
 RELEASE="$(rpm -E %fedora)"
 
 PACKAGES_TO_INSTALL=(
@@ -21,13 +20,19 @@ PACKAGES_TO_INSTALL=(
     foot
 )
 
-
-# this installs a package from fedora repos
+# Install necessary packages
 dnf install -y "${PACKAGES_TO_INSTALL[@]}"
 
+# Remove unwanted packages
 dnf remove -y \
     nvtop ptyxis tailscale solaar simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
 
-sudo mkdir -p /root
-sudo chown root:root /root
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install linux --no-confirm --init none
+# Ensure /root exists, but only if needed
+if [ ! -d /root ]; then
+    mkdir -p /root
+    chown root:root /root
+fi
+
+# Install Nix without starting the daemon or initializing
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
+  sh -s -- install linux --no-confirm --init none
