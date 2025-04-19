@@ -27,4 +27,4 @@ dnf install -y "${PACKAGES_TO_INSTALL[@]}"
 dnf remove -y \
     nvtop ptyxis tailscale solaar simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
 
-mkdir /nix
+curl -fsSL "https://raw.githubusercontent.com/ublue-os/bluefin/refs/heads/main/build_files/base/10-brew.sh" | bash
