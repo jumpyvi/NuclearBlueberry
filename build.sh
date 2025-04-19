@@ -26,3 +26,5 @@ dnf install -y "${PACKAGES_TO_INSTALL[@]}"
 # Remove unwanted packages
 dnf remove -y \
     nvtop ptyxis tailscale solaar simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
+
+mkdir /nix
