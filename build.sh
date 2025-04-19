@@ -27,12 +27,6 @@ dnf install -y "${PACKAGES_TO_INSTALL[@]}"
 dnf remove -y \
     nvtop ptyxis tailscale solaar simple-scan gnome-shell-extension-search-light gnome-shell-extension-tailscale-gnome-qs
 
-# Ensure /root exists, but only if needed
-if [ ! -d /root ]; then
-    mkdir -p /root
-    chown root:root /root
-fi
-
 sh <(curl -L https://nixos.org/nix/install) --daemon --yes
 mkdir /etc/.nix-mount-temp
 mv /nix /etc/.nix-mount-temp
